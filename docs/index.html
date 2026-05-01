@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raine Li — Curator & Artist</title>
+  <meta name="description" content="Raine Li (李雨谦) is a London-based curator, artist, writer and researcher working across art, technology and cultural identity." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav class="nav js-nav" aria-label="Main navigation">
+
+    <!-- Hamburger -->
+    <button class="nav-burger js-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Logo (centred) -->
+    <a href="index.html" class="nav-logo">Raine Li</a>
+
+    <!-- Right slot — CV link, can be removed -->
+    <div class="nav-right">
+      <a href="#contact">Contact</a>
+    </div>
+
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       SIDE MENU  (Pace-style slide-in)
+  ══════════════════════════════════════════ -->
+
+  <!-- Scrim / backdrop -->
+  <div class="nav-scrim js-nav-scrim" aria-hidden="true"></div>
+
+  <!-- Menu panel -->
+  <nav class="nav-menu js-nav-menu" id="nav-menu" aria-hidden="true" aria-label="Site menu">
+
+    <!-- Close button -->
+    <button class="nav-close js-nav-close" aria-label="Close menu">
+      <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M11 10.293l7.146-7.147.708.708L11.707 11l7.147 7.146-.708.708L11 11.707l-7.146 7.147-.708-.708L10.293 11 3.146 3.854l.708-.708L11 10.293z"
+          fill="currentColor"/>
+      </svg>
+    </button>
+
+    <!-- Primary links -->
+    <ul class="nav-menu-list js-nav-list">
+      <li class="nav-menu-item js-nav-item">
+        <a href="#work">Work</a>
+      </li>
+      <li class="nav-menu-item js-nav-item">
+        <a href="#about">About</a>
+      </li>
+      <li class="nav-menu-item js-nav-item">
+        <a href="#practice">Practice</a>
+      </li>
+      <li class="nav-menu-item js-nav-item">
+        <a href="#writing">Writing</a>
+      </li>
+      <li class="nav-menu-item js-nav-item">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Footer info inside menu -->
+    <div class="nav-menu-footer js-nav-footer">
+      <a href="mailto:raineli.art@gmail.com">raineli.art@gmail.com</a>
+      <a href="https://instagram.com/moon.kingdom" target="_blank">@moon.kingdom</a>
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
+
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════
+       HERO  —  editorial, photo contained
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+      <div class="hero-text-top">
+        <span class="hero-eyebrow">Curator &amp; Artist &nbsp;·&nbsp; London</span>
+        <h1 class="hero-name">Raine<br>Li</h1>
+        <p class="hero-name-cn">李雨谦</p>
+      </div>
+      <div class="hero-text-bottom">
+        <p class="hero-desc">
+          Art Director of EAST2046. Curator, artist and researcher working across art, technology and cultural identity.
+        </p>
+        <a href="#work" class="hero-cta">View Work →</a>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <!-- Replace with: <img src="assets/images/portraits/raine-li.jpg" alt="Raine Li"> -->
+      <img src="assets/images/portraits/raine-li.jpg" alt="Raine Li — London, 2025" />
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       WORK / SELECTED PROJECTS
+  ══════════════════════════════════════════ -->
+  <section class="section" id="work">
+    <div class="section-inner">
+      <span class="eyebrow">Selected Work</span>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 01 — EAST2046 -->
+        <a href="work/east2046.html" class="project-card">
+          <div class="project-img">
+            <!-- Add image: assets/images/work/east2046/cover.jpg -->
+            <div class="project-placeholder ph-01">
+              <span class="project-placeholder-num">01</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <p class="project-title">EAST2046</p>
+              <span class="project-sub">Art Direction &amp; Programming</span>
+            </div>
+            <div class="project-info-right">
+              <span class="project-location">London</span>
+              <span class="project-arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT 02 — Interweave Award -->
+        <a href="work/interweave-award.html" class="project-card">
+          <div class="project-img">
+            <!-- Add image: assets/images/work/interweave-award/cover.jpg -->
+            <div class="project-placeholder ph-02">
+              <span class="project-placeholder-num">02</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <p class="project-title">Interweave Award</p>
+              <span class="project-sub">Initiative &amp; Direction</span>
+            </div>
+            <div class="project-info-right">
+              <span class="project-location">International</span>
+              <span class="project-arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT 03 — Milan Design Week -->
+        <a href="work/milan-design-week.html" class="project-card">
+          <div class="project-img">
+            <!-- Add image: assets/images/work/milan-design-week/cover.jpg -->
+            <div class="project-placeholder ph-03">
+              <span class="project-placeholder-num">03</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <p class="project-title">Milan Design Week</p>
+              <span class="project-sub">Curatorial Project</span>
+            </div>
+            <div class="project-info-right">
+              <span class="project-location">Milan</span>
+              <span class="project-arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT 04 — NYCxDESIGN -->
+        <a href="work/nycxdesign.html" class="project-card">
+          <div class="project-img">
+            <!-- Add image: assets/images/work/nycxdesign/cover.jpg -->
+            <div class="project-placeholder ph-04">
+              <span class="project-placeholder-num">04</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <p class="project-title">NYCxDESIGN Festival</p>
+              <span class="project-sub">Curatorial Project</span>
+            </div>
+            <div class="project-info-right">
+              <span class="project-location">New York</span>
+              <span class="project-arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT 05 — London Design Festival -->
+        <a href="work/london-design-festival.html" class="project-card">
+          <div class="project-img">
+            <!-- Add image: assets/images/work/london-design-festival/cover.jpg -->
+            <div class="project-placeholder ph-05">
+              <span class="project-placeholder-num">05</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <p class="project-title">London Design Festival</p>
+              <span class="project-sub">Curatorial Project</span>
+            </div>
+            <div class="project-info-right">
+              <span class="project-location">London</span>
+              <span class="project-arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- PROJECT 06 — Arts Fringe -->
+        <a href="work/arts-fringe.html" class="project-card">
+          <div class="project-img">
+            <!-- Add image: assets/images/work/arts-fringe/cover.jpg -->
+            <div class="project-placeholder ph-06">
+              <span class="project-placeholder-num">06</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-info-left">
+              <p class="project-title">Arts Fringe</p>
+              <span class="project-sub">Curatorial Exhibition</span>
+            </div>
+            <div class="project-info-right">
+              <span class="project-location">—</span>
+              <span class="project-arrow">→</span>
+            </div>
+          </div>
+        </a>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════ -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <span class="eyebrow">About</span>
+
+      <div class="about-grid">
+
+        <!-- Left: portrait + meta -->
+        <div class="about-left">
+          <div class="about-portrait">
+            <img src="assets/images/portraits/raine-li.jpg" alt="Raine Li" />
+          </div>
+          <p class="about-caption">Raine Li — London, 2025</p>
+          <div class="about-meta">
+            <div class="meta-item">
+              <span class="meta-label">Based</span>
+              <span class="meta-value">London, UK</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">Art Director, EAST2046<br>Initiator, Interweave Award</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Education</span>
+              <span class="meta-value">Glasgow School of Art</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Presented</span>
+              <span class="meta-value">London · Tokyo · Beijing<br>New York · Milan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: bio -->
+        <div class="about-right">
+          <h2 class="about-heading">Curator, Artist,<br>Writer &amp; Researcher</h2>
+          <div class="about-text">
+            <p>Raine Li (李雨谦) is a London-based curator, artist, writer and researcher whose work moves across the intersections of contemporary art, technological pluralism and cultural identity. At the heart of her practice is a sustained inquiry into cultural plurality: how diverse cultural experiences are constructed, represented and negotiated, and the conditions that render certain voices visible while others remain marginalised.</p>
+            <p>She is Art Director of EAST2046 and initiator of the Interweave Award, two platforms she has developed as spaces for interdisciplinary exchange and critical inquiry. Her work spans curatorial, artistic and critical practices, through which she examines how emerging technologies are situated within and shaped by broader cultural and institutional frameworks.</p>
+            <p>Her projects have been presented internationally in London, Tokyo, Beijing, New York and Milan, and at major platforms including Milan Design Week, NYCxDESIGN Festival, London Design Festival and Arts Fringe.</p>
+            <p>Rooted in the Yi (彝) ethnic minority culture of Yunnan, China, Li's research is shaped by a deep engagement with questions of cultural plurality and identity. Drawing on feminist and postcolonial critical frameworks, she analyses the power structures and modes of representation embedded in contemporary technological and cultural discourses.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       PRACTICE — numbered list
+  ══════════════════════════════════════════ -->
+  <section class="section" id="practice">
+    <div class="section-inner">
+      <span class="eyebrow">Practice</span>
+
+      <div class="practice-list">
+
+        <div class="practice-row">
+          <span class="practice-num">01</span>
+          <div class="practice-info">
+            <span class="practice-title">EAST2046</span>
+            <span class="practice-sub">Art Direction &amp; Programming</span>
+          </div>
+          <div class="practice-right">
+            <span class="practice-location">London</span>
+            <span class="tag">Ongoing</span>
+          </div>
+        </div>
+
+        <div class="practice-row">
+          <span class="practice-num">02</span>
+          <div class="practice-info">
+            <span class="practice-title">Interweave Award</span>
+            <span class="practice-sub">Initiator &amp; Director</span>
+          </div>
+          <div class="practice-right">
+            <span class="practice-location">International</span>
+            <span class="tag">Ongoing</span>
+          </div>
+        </div>
+
+        <div class="practice-row">
+          <span class="practice-num">03</span>
+          <div class="practice-info">
+            <span class="practice-title">Milan Design Week</span>
+            <span class="practice-sub">Curatorial Project</span>
+          </div>
+          <div class="practice-right">
+            <span class="practice-location">Milan</span>
+            <span class="tag">Curating</span>
+          </div>
+        </div>
+
+        <div class="practice-row">
+          <span class="practice-num">04</span>
+          <div class="practice-info">
+            <span class="practice-title">NYCxDESIGN Festival</span>
+            <span class="practice-sub">Curatorial Project</span>
+          </div>
+          <div class="practice-right">
+            <span class="practice-location">New York</span>
+            <span class="tag">Curating</span>
+          </div>
+        </div>
+
+        <div class="practice-row">
+          <span class="practice-num">05</span>
+          <div class="practice-info">
+            <span class="practice-title">London Design Festival</span>
+            <span class="practice-sub">Curatorial Project</span>
+          </div>
+          <div class="practice-right">
+            <span class="practice-location">London</span>
+            <span class="tag">Curating</span>
+          </div>
+        </div>
+
+        <div class="practice-row">
+          <span class="practice-num">06</span>
+          <div class="practice-info">
+            <span class="practice-title">Arts Fringe</span>
+            <span class="practice-sub">Curatorial Exhibition</span>
+          </div>
+          <div class="practice-right">
+            <span class="practice-location">—</span>
+            <span class="tag">Exhibition</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       WRITING
+  ══════════════════════════════════════════ -->
+  <section class="section" id="writing">
+    <div class="section-inner">
+      <span class="eyebrow">Writing</span>
+
+      <div class="writing-list">
+        <!-- Placeholder — add writing items when ready -->
+        <div class="writing-empty">
+          <p>Critical writing, essays and reviews — forthcoming.</p>
+        </div>
+
+        <!--
+          WRITING ITEM TEMPLATE — copy and paste below when you have content:
+
+          <div class="writing-row">
+            <div>
+              <p class="writing-title">Essay or Article Title</p>
+              <span class="writing-pub">Publication or Platform Name</span>
+            </div>
+            <span class="writing-year">2025</span>
+          </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-inner">
+      <h2 class="contact-heading">Get<br>in touch.</h2>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:raineli.art@gmail.com" class="contact-value">raineli.art@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Organisation</span>
+          <span class="contact-value">EAST2046, London</span>
+        </div>
+        <div class="contact-social">
+          <a href="https://instagram.com/moon.kingdom" target="_blank">Instagram</a>
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">CV →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-l">London, UK &nbsp;·&nbsp; © 2026 Raine Li</div>
+    <div class="footer-r">
+      <a href="mailto:raineli.art@gmail.com">raineli.art@gmail.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://instagram.com/moon.kingdom" target="_blank">@moon.kingdom</a>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════ -->
+  <!-- GSAP (Pace Gallery also uses this) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- Site JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
