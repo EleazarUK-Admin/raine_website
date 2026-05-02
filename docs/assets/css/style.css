@@ -291,17 +291,43 @@ body.nav-open .nav-menu {
 }
 .hero-cta:hover { opacity: 0.4; }
 
-/* Photo — contained, editorial */
+/* Spline embed + optional static fallback */
 .hero-media {
   position: relative;
   overflow: hidden;
-  background: #ddd;
+  background: #0a0a0a;
+  min-height: 0;
 }
-.hero-media img {
+.hero-spline {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.hero-spline iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.hero-media-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 12%;
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-spline {
+    display: none;
+  }
+  .hero-media-fallback {
+    display: block;
+    z-index: 2;
+  }
 }
 
 
@@ -319,45 +345,14 @@ body.nav-open .nav-menu {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   text-decoration: none;
   color: inherit;
 }
 
-/* Image area */
-.project-img {
-  aspect-ratio: 4 / 3;
-  position: relative;
-  overflow: hidden;
-}
-.project-img img {
-  transition: transform 0.65s ease;
-}
-.project-card:hover .project-img img {
-  transform: scale(1.04);
-}
-
-/* Placeholder — shown when no real image yet */
-.project-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.project-placeholder-num {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 8rem;
-  color: rgba(255,255,255,0.06);
-  user-select: none;
-  transition: color 0.4s ease;
-}
-.project-card:hover .project-placeholder-num {
-  color: rgba(255,255,255,0.1);
-}
-
-/* Per-project placeholder colours */
+/* Per-project hero tones (used on project detail pages) */
 .ph-01 { background: linear-gradient(135deg, #141414, #0e0e0e); }
 .ph-02 { background: linear-gradient(135deg, #1a1510, #111008); }
 .ph-03 { background: linear-gradient(135deg, #0e1418, #080e12); }
@@ -365,10 +360,10 @@ body.nav-open .nav-menu {
 .ph-05 { background: linear-gradient(135deg, #12141a, #0a0c12); }
 .ph-06 { background: linear-gradient(135deg, #141010, #0e0808); }
 
-/* Card info below image */
+/* Card info — index list is text-only; imagery lives on project pages */
 .project-info {
-  padding: 20px 24px 24px;
-  border-top: 1px solid var(--light);
+  flex: 1;
+  padding: 28px 24px 32px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
