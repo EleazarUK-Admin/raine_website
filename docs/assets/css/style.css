@@ -291,7 +291,7 @@ body.nav-open .nav-menu {
 }
 .hero-cta:hover { opacity: 0.4; }
 
-/* Spline embed + optional static fallback */
+/* Spline embed fills right column — no hero portrait (see About for photo) */
 .hero-media {
   position: relative;
   overflow: hidden;
@@ -309,24 +309,10 @@ body.nav-open .nav-menu {
   border: 0;
   display: block;
 }
-.hero-media-fallback {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 12%;
-  display: none;
-}
 
 @media (prefers-reduced-motion: reduce) {
   .hero-spline {
     display: none;
-  }
-  .hero-media-fallback {
-    display: block;
-    z-index: 2;
   }
 }
 
