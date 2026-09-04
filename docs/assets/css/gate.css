@@ -1,0 +1,206 @@
+/* ============================================================
+   RAINE LI — gate.css
+   Styles for the access page only (index.html).
+   Loads after style.css and reuses its tokens and footer.
+   ============================================================ */
+
+.gate-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* ── Top bar — same proportions as the site nav ── */
+.gate-bar {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--light);
+  flex: none;
+}
+.gate-logo {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--black);
+}
+
+/* ── Centre block ── */
+.gate-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 44px 40px;
+}
+.gate-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 58% 42%;
+  align-items: center;
+}
+.gate-inner { min-width: 0; }
+
+/* Right column — echoes the hairline split of the homepage hero */
+.gate-meta {
+  border-left: 1px solid var(--light);
+  padding-left: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.gate-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.gate-meta-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+.gate-meta-value {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--black);
+}
+a.gate-meta-value { transition: opacity 0.2s ease; }
+a.gate-meta-value:hover { opacity: 0.4; }
+
+.gate-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(3rem, 7vw, 5.6rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+.gate-cn {
+  font-family: var(--serif);
+  font-size: clamp(0.85rem, 1.6vw, 1.15rem);
+  color: var(--grey);
+  letter-spacing: 0.3em;
+  margin-top: 18px;
+}
+.gate-line {
+  max-width: 400px;
+  margin-top: 36px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #555;
+}
+
+/* ── Password form ── */
+.gate-form {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--light);
+  max-width: 400px;
+}
+.gate-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 18px;
+}
+.gate-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+.gate-input {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--black);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--light);
+  padding: 0 0 10px;
+  border-radius: 0;
+  transition: border-color 0.25s ease;
+}
+.gate-input:focus {
+  outline: none;
+  border-bottom-color: var(--black);
+}
+.gate-input::placeholder { color: #c4c4c4; }
+
+.gate-submit {
+  flex: none;
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: none;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding: 0 0 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.gate-submit:hover { opacity: 0.4; }
+.gate-submit:disabled { opacity: 0.3; cursor: default; }
+.gate-submit:focus-visible,
+.gate-input:focus-visible { outline: 1px solid var(--black); outline-offset: 4px; }
+
+.gate-note {
+  margin-top: 18px;
+  min-height: 17px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--grey);
+}
+
+/* ── Entrance ── */
+.gate-inner > * {
+  animation: gate-in 0.7s var(--ease-menu) both;
+}
+.gate-inner > *:nth-child(2) { animation-delay: 0.06s; }
+.gate-inner > *:nth-child(3) { animation-delay: 0.12s; }
+.gate-inner > *:nth-child(4) { animation-delay: 0.18s; }
+
+@keyframes gate-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gate-inner > * { animation: none; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .gate-grid { grid-template-columns: 1fr; gap: 48px; }
+  .gate-meta {
+    border-left: none;
+    border-top: 1px solid var(--light);
+    padding-left: 0;
+    padding-top: 32px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 28px 48px;
+  }
+}
+
+@media (max-width: 720px) {
+  .gate-main { padding: 48px 20px; }
+  .gate-line { margin-top: 36px; }
+  .gate-form { margin-top: 44px; }
+  /* 16px keeps iOS from zooming the viewport on focus */
+  .gate-input { font-size: 16px; }
+  .gate-row { flex-direction: column; align-items: stretch; gap: 22px; }
+  .gate-submit { align-self: flex-start; }
+}
